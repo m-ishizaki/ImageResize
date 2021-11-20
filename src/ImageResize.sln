@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageResizeConsole", "ImageResizeConsole\ImageResizeConsole.csproj", "{34A1AB4F-62DF-437F-BAC6-5EBC2A9C6AE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageResizeCore", "ImageResizeCore\ImageResizeCore.csproj", "{3E6AAFDF-D1ED-41A0-B402-B60520DF13CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageResizeDesktop", "ImageResizeDesktop\ImageResizeDesktop.csproj", "{1F169C03-0070-453A-9ED6-6E06E7AAA393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageResizeConsole.Test", "ImageResizeConsole.Test\ImageResizeConsole.Test.csproj", "{B43D8EC5-8A41-49FD-ABF6-E1F7B26C9F2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageResizeCore.Test", "ImageResizeCore.Test\ImageResizeCore.Test.csproj", "{24679F7B-C00A-400D-ADAA-02A0A8E05720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageResizeDesktop.Test", "ImageResizeDesktop.Test\ImageResizeDesktop.Test.csproj", "{309A27F7-E2BE-42C4-AFB7-4932741DA5AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34A1AB4F-62DF-437F-BAC6-5EBC2A9C6AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A1AB4F-62DF-437F-BAC6-5EBC2A9C6AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A1AB4F-62DF-437F-BAC6-5EBC2A9C6AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A1AB4F-62DF-437F-BAC6-5EBC2A9C6AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E6AAFDF-D1ED-41A0-B402-B60520DF13CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E6AAFDF-D1ED-41A0-B402-B60520DF13CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E6AAFDF-D1ED-41A0-B402-B60520DF13CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E6AAFDF-D1ED-41A0-B402-B60520DF13CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F169C03-0070-453A-9ED6-6E06E7AAA393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F169C03-0070-453A-9ED6-6E06E7AAA393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F169C03-0070-453A-9ED6-6E06E7AAA393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F169C03-0070-453A-9ED6-6E06E7AAA393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B43D8EC5-8A41-49FD-ABF6-E1F7B26C9F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43D8EC5-8A41-49FD-ABF6-E1F7B26C9F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43D8EC5-8A41-49FD-ABF6-E1F7B26C9F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43D8EC5-8A41-49FD-ABF6-E1F7B26C9F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24679F7B-C00A-400D-ADAA-02A0A8E05720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24679F7B-C00A-400D-ADAA-02A0A8E05720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24679F7B-C00A-400D-ADAA-02A0A8E05720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24679F7B-C00A-400D-ADAA-02A0A8E05720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{309A27F7-E2BE-42C4-AFB7-4932741DA5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309A27F7-E2BE-42C4-AFB7-4932741DA5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309A27F7-E2BE-42C4-AFB7-4932741DA5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309A27F7-E2BE-42C4-AFB7-4932741DA5AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74111A59-2CE8-4AE5-97D4-B91D7076426F}
+	EndGlobalSection
+EndGlobal
