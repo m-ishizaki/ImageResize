@@ -18,7 +18,7 @@ internal class ImageService : IImageService
             ;
 
         Bitmap result = new(width, height);
-        var g = Graphics.FromImage(result);
+        using var g = Graphics.FromImage(result);
         g.DrawImage(source, 0, 0, width, height);
         return result;
     }

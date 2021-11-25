@@ -27,6 +27,9 @@ internal class FileRepositoryTests
         string fileName = Path.Combine(directoryPah, "test01.jpg");
         {
             using Bitmap bitmap = new(3, 3);
+            using var g = Graphics.FromImage(bitmap);
+            g.FillRectangle(Brushes.Aqua, new(0, 0, 3, 3));
+            g.FillRectangle(Brushes.Violet, new(0, 0, 1, 1));
             bitmap.Save(fileName);
         }
 
@@ -36,6 +39,8 @@ internal class FileRepositoryTests
             using var bitmap = fileRepository.LoadImageFile(fileName);
             Assert.IsTrue(bitmap.Width == 3);
             Assert.IsTrue(bitmap.Height == 3);
+            Assert.IsTrue(bitmap.GetPixel(0, 0).ToArgb() == Color.Violet.ToArgb());
+            Assert.IsTrue(bitmap.GetPixel(1, 1).ToArgb() == Color.Aqua.ToArgb());
         }
     }
 
@@ -44,13 +49,24 @@ internal class FileRepositoryTests
     {
         string filePath = Path.Combine(directoryPah, "test02.jpg");
 
-        IFileRepository fileRepository = new FileRepository();
+        {
+            using Bitmap bitmap = new(3, 3);
+            var g = Graphics.FromImage(bitmap);
+            g.FillRectangle(Brushes.Aqua, new(0, 0, 3, 3));
+            g.FillRectangle(Brushes.Violet, new(0, 0, 1, 1));
 
-        fileRepository.SaveImageFile(filePath, new(3, 3));
+            IFileRepository fileRepository = new FileRepository();
 
-        using Bitmap bitmap = new(filePath);
-        Assert.IsTrue(bitmap.Width == 3);
-        Assert.IsTrue(bitmap.Height == 3);
+            fileRepository.SaveImageFile(filePath, bitmap);
+        }
+
+        {
+            using Bitmap bitmap = new(filePath);
+            Assert.IsTrue(bitmap.Width == 3);
+            Assert.IsTrue(bitmap.Height == 3);
+            Assert.IsTrue(bitmap.GetPixel(0, 0).ToArgb() == Color.Violet.ToArgb());
+            Assert.IsTrue(bitmap.GetPixel(1, 1).ToArgb() == Color.Aqua.ToArgb());
+        }
     }
 }
 

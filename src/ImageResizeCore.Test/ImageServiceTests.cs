@@ -49,7 +49,7 @@ internal class ImageServiceTests
 
         IImageService imageService = new ImageService();
         {
-            var g = Graphics.FromImage(source);
+            using var g = Graphics.FromImage(source);
             g.FillRectangle(Brushes.Aqua, new(0, 0, 20, 20));
             g.FillRectangle(Brushes.Violet, new(0, 0, 2, 2));
             g.FillRectangle(Brushes.Violet, new(18, 18, 2, 2));
@@ -59,14 +59,12 @@ internal class ImageServiceTests
 
         Assert.IsTrue(result.Width == 10);
         Assert.IsTrue(result.Height == 10);
-        {
-            Assert.IsTrue(result.GetPixel(0, 0).ToArgb() == Color.Violet.ToArgb());
-            Assert.IsTrue(result.GetPixel(9, 9).ToArgb() == Color.Violet.ToArgb());
-            Assert.IsTrue(result.GetPixel(1, 0).ToArgb() == Color.Aqua.ToArgb());
-            Assert.IsTrue(result.GetPixel(0, 1).ToArgb() == Color.Aqua.ToArgb());
-            Assert.IsTrue(result.GetPixel(9, 0).ToArgb() == Color.Aqua.ToArgb());
-            Assert.IsTrue(result.GetPixel(0, 9).ToArgb() == Color.Aqua.ToArgb());
-        }
+        Assert.IsTrue(result.GetPixel(0, 0).ToArgb() == Color.Violet.ToArgb());
+        Assert.IsTrue(result.GetPixel(9, 9).ToArgb() == Color.Violet.ToArgb());
+        Assert.IsTrue(result.GetPixel(1, 0).ToArgb() == Color.Aqua.ToArgb());
+        Assert.IsTrue(result.GetPixel(0, 1).ToArgb() == Color.Aqua.ToArgb());
+        Assert.IsTrue(result.GetPixel(9, 0).ToArgb() == Color.Aqua.ToArgb());
+        Assert.IsTrue(result.GetPixel(0, 9).ToArgb() == Color.Aqua.ToArgb());
     }
 
 }
