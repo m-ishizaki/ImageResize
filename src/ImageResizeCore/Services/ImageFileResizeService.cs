@@ -20,8 +20,8 @@ internal class ImageFileResizeService : IImageFileResizeService
 
     public void Resize(string sourceFilePath, string outFilePath, int longSideLength)
     {
-        using var image = fileRepository.LoadImageFile(sourceFilePath);
-        imageService.Resize(image, longSideLength);
-        fileRepository.SaveImageFile(outFilePath, image);
+        using var sourceImage = fileRepository.LoadImageFile(sourceFilePath);
+        using var outImage = imageService.Resize(sourceImage, longSideLength);
+        fileRepository.SaveImageFile(outFilePath, outImage);
     }
 }
