@@ -9,14 +9,18 @@
 	  <PackAsTool>true</PackAsTool>
 	  <ToolCommandName>ImageResize</ToolCommandName>
 	  <PackageOutputPath>./nupkg</PackageOutputPath>
-	  <PackageLicenseFile>../../LICENSE</PackageLicenseFile>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
 	  <PackageId>Rksoftware.$(AssemblyName)</PackageId>
 	  <Authors>Rksoftware</Authors>
 	  <RootNamespace>Rksoftware.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
 	  <AssemblyVersion></AssemblyVersion>
 	  <Version>$(VersionPrefix)0.1.0</Version>
+	  <DebugType>none</DebugType>
   </PropertyGroup>
 
+	<ItemGroup>
+		<None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+	</ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
   </ItemGroup>
