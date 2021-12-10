@@ -13,4 +13,4 @@ using IHost host = Host.CreateDefaultBuilder(args)
     )
     .Build();
 
-host.Services.GetService<IImageFileResizeService>()!.Resize(args.FirstOrDefault(string.Empty), args.Skip(1).FirstOrDefault(string.Empty), 1368);
+host.Services.GetService<IImageFileResizeService>()!.Resize(args.FirstOrDefault(string.Empty), args.Skip(1).FirstOrDefault(string.Empty), int.TryParse(args.Skip(2).FirstOrDefault(), out var size) ? size : 1368);

@@ -20,6 +20,21 @@ internal class ImageFileResizeService : IImageFileResizeService
 
     public void Resize(string sourceFilePath, string outFilePath, int longSideLength)
     {
+        if (Directory.Exists(sourceFilePath))
+            ResizeDirectory(sourceFilePath, outFilePath, longSideLength);
+        else
+            ResizeFile(sourceFilePath, outFilePath, longSideLength);
+    }
+
+    public void ResizeDirectory(string sourceFilePath, string outFilePath, int longSideLength)
+    {
+        foreach (var file in Directory.GetFiles(sourceFilePath).Select((filePath, index) => new { filePath, index }))
+            ResizeFile(file.filePath, Path.Combine(outFilePath, (file.index + 1).ToString("000") + Path.GetExtension(file.filePath)), longSideLength);
+
+    }
+
+    public void ResizeFile(string sourceFilePath, string outFilePath, int longSideLength)
+    {
         using var sourceImage = fileRepository.LoadImageFile(sourceFilePath);
         using var outImage = imageService.Resize(sourceImage, longSideLength);
         fileRepository.SaveImageFile(outFilePath, outImage);

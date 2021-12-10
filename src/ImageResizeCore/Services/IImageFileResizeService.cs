@@ -9,4 +9,6 @@ namespace ImageResizeCore.Services;
 internal interface IImageFileResizeService
 {
     void Resize(string sourceFilePath, string outFilePath, int longSideLength);
+    void ResizeDirectory(string sourceFilePath, string outFilePath, int longSideLength);
+    void ResizeFile(string sourceFilePath, string outFilePath, int longSideLength);
 }
