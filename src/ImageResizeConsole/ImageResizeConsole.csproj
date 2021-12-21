@@ -16,10 +16,22 @@
 		<AssemblyVersion></AssemblyVersion>
 		<Version>$(VersionPrefix)0.2.0</Version>
 		<DebugType>none</DebugType>
+
+		<Title>image resizer</Title>
+		<Description>This tool resizes the image file.</Description>
+		<Summary>This tool resizes the image file.</Summary>
+		<PackageProjectUrl>https://github.com/m-ishizaki/ImageResize</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/m-ishizaki/ImageResize</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Copyright>m-ishizaki</Copyright>
+		<PackageReleaseNotes></PackageReleaseNotes>
+	
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+		<None Update="README.md" Pack="true" PackagePath="" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
