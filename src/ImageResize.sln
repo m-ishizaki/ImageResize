@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageResizeDesktop.Test", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgumentsBuilder", "ArgumentsBuilder\ArgumentsBuilder.csproj", "{62762D0C-C1A2-41F5-948A-A3C3B0ECB789}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgumentsBuilder.Test", "ArgumentsBuilder.Test\ArgumentsBuilder.Test.csproj", "{80AC3182-6D1B-4CDD-A72B-F0226C46B1E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{62762D0C-C1A2-41F5-948A-A3C3B0ECB789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62762D0C-C1A2-41F5-948A-A3C3B0ECB789}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62762D0C-C1A2-41F5-948A-A3C3B0ECB789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80AC3182-6D1B-4CDD-A72B-F0226C46B1E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80AC3182-6D1B-4CDD-A72B-F0226C46B1E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80AC3182-6D1B-4CDD-A72B-F0226C46B1E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80AC3182-6D1B-4CDD-A72B-F0226C46B1E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

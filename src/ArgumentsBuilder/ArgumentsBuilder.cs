@@ -16,17 +16,27 @@ public static class ArgumentsBuilder
 
         foreach (var arg in args)
         {
+            if (string.IsNullOrWhiteSpace(arg))
+            {
+                continue;
+            }
+
+            {
+                var pre = arg.First();
+                if (new[] { '-', '/' }.Contains(pre))
+                {
+                    optionName = new string(arg.SkipWhile(c => c == pre).ToArray());
+                    options.Add(optionName, "");
+                    continue;
+                }
+            }
+
             if (string.IsNullOrWhiteSpace(optionName))
             {
                 parameters.Add(arg);
                 continue;
             }
-            if (arg.StartsWith("-"))
-            {
-                optionName = new string(arg.SkipWhile(c => c != '-').ToArray());
-                options.Add(arg, "");
-                continue;
-            }
+
             options[optionName] = arg;
             optionName = "";
         }
